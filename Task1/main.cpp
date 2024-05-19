@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cmath>
 
 float triangleSideLength(int x1, int y1, int x2, int y2) {
@@ -19,14 +19,14 @@ int main(){
 
 	int ax, ay, bx, by, cx, cy;
 	
-	std::cout << "Ââåäèòå êîîðäèíàòû x, y òî÷êè A: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ x, y Ñ‚Ð¾Ñ‡ÐºÐ¸ A: ";
 	std::cin >> ax >> ay;
-	std::cout << "Ââåäèòå êîîðäèíàòû x, y òî÷êè B: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ x, y Ñ‚Ð¾Ñ‡ÐºÐ¸ B: ";
 	std::cin >> bx >> by;
-	std::cout << "Ââåäèòå êîîðäèíàòû x, y òî÷êè C: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ x, y Ñ‚Ð¾Ñ‡ÐºÐ¸ C: ";
 	std::cin >> cx >> cy;
 
-	std::cout << "Çàäàíû âåðøèíû òðåóãîëüíèêà ABC: ";
+	std::cout << "Ð—Ð°Ð´Ð°Ð½Ñ‹ Ð²ÐµÑ€ÑˆÐ¸Ð½Ñ‹ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° ABC: ";
 	std::cout << "A(" << ax << ", " << ay << "), ";
 	std::cout << "B(" << bx << ", " << by << "), ";
 	std::cout << "C(" << cx << ", " << cy << ")" << "\n";

@@ -6,7 +6,15 @@
 #include <cassert> // для assert
 
 bool checkArrRandom(std::vector<int> test_arr) {
-	return true; // ДОПИСАТЬ
+	
+	arrRandom(test_arr, 0, 0);
+	if (test_arr[0] != 0)
+		return false;
+	arrRandom(test_arr, -1, 1);
+	if ((test_arr[0] >= -1) && (test_arr[0] <= 1)) // поменять и на или !!!!!!!!!!!!!!!!!!!!!!!
+		return false;
+
+	return true;
 }
 
 int main() {
@@ -26,7 +34,7 @@ int main() {
 	std::vector<int> arr(n);
 
 	//arrFactorial(arr);
-	arrRandom(arr, -60, 10);
+	arrRandom(arr, 30, -30);
 	outputArray(arr);
 
 	return 0;

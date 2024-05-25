@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include <trianglecalc.h>
+#include "trianglecalc.h"
 
 // раскомментировать строку ниже, чтобы отключить assert()
 // #define NDEBUG
@@ -24,9 +24,9 @@ int main(){
 	assert(triangleArea(10.0, 20.0, 30.0) < FLT_EPSILON); // Если сумма двух сторон равна третьей, площадь равна 0
 	assert((triangleArea(42.0, 21.0, 56.0) - 374.577678859) < FLT_EPSILON); // Проверка на обычных значениях
 
-	setlocale(LC_ALL, "Russian");
+	setlocale(LC_ALL, "Russian"); // Для русского языка в консоли
 
-	int ax, ay, bx, by, cx, cy;
+	int ax, ay, bx, by, cx, cy; // Координаты вершин треугольника
 	
 	std::cout << "Введите координаты x, y точки A: ";
 	std::cin >> ax >> ay;
@@ -38,13 +38,14 @@ int main(){
 	std::cout << "Заданы вершины треугольника ABC: ";
 	std::cout << "A(" << ax << ", " << ay << "), ";
 	std::cout << "B(" << bx << ", " << by << "), ";
-	std::cout << "C(" << cx << ", " << cy << ")" << "\n";
+	std::cout << "C(" << cx << ", " << cy << ")" << '\n';
 
+	// Вычисление длин сторон треугольника
 	float sideA = triangleSideLength(ax, ay, bx, by);
 	float sideB = triangleSideLength(bx, by, cx, cy);
 	float sideC = triangleSideLength(cx, cy, ax, ay);
 
-	std::cout << trianglePerimeter(sideA, sideB, sideC) << "\n";
-	std::cout << triangleArea(sideA, sideB, sideC);
+	std::cout << "Периметр треугольника ABC: " << trianglePerimeter(sideA, sideB, sideC) << '\n';
+	std::cout << "Площадь треугольника ABC: " << triangleArea(sideA, sideB, sideC) << '\n';
 	return 0;
 }

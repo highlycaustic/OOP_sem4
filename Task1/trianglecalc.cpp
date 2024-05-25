@@ -1,17 +1,17 @@
-#include <cmath>
+п»ї#include <cmath>
 
-// Вычисляет длину отрезка по координатам x1, y1 первой точки и координатам x2, y2 второй точки.
+// Р’С‹С‡РёСЃР»СЏРµС‚ РґР»РёРЅСѓ РѕС‚СЂРµР·РєР° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј x1, y1 РїРµСЂРІРѕР№ С‚РѕС‡РєРё Рё РєРѕРѕСЂРґРёРЅР°С‚Р°Рј x2, y2 РІС‚РѕСЂРѕР№ С‚РѕС‡РєРё.
 float triangleSideLength(int x1, int y1, int x2, int y2) {
 	return std::sqrt(std::pow((x2 - x1), 2) + std::pow((y2 - y1), 2));
 }
 
-// Вычисляет периметр треугольника по трем его сторонам.
+// Р’С‹С‡РёСЃР»СЏРµС‚ РїРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РїРѕ С‚СЂРµРј РµРіРѕ СЃС‚РѕСЂРѕРЅР°Рј.
 float trianglePerimeter(float sideA, float sideB, float sideC) {
 	return sideA + sideB + sideC;
 }
 
-// Вычисляет площадь треугольника по трем его сторонам.
+// Р’С‹С‡РёСЃР»СЏРµС‚ РїР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РїРѕ С‚СЂРµРј РµРіРѕ СЃС‚РѕСЂРѕРЅР°Рј.
 float triangleArea(float sideA, float sideB, float sideC) {
-	float halfPerimeter = trianglePerimeter(sideA, sideB, sideC) / 2; // Полупериметр треугольника
-	return std::sqrt(halfPerimeter * (halfPerimeter - sideA) * (halfPerimeter - sideB) * (halfPerimeter - sideC)); // Нахождение площади по формуле Герона
+	float halfPerimeter = trianglePerimeter(sideA, sideB, sideC) / 2; // РџРѕР»СѓРїРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
+	return std::sqrt(halfPerimeter * (halfPerimeter - sideA) * (halfPerimeter - sideB) * (halfPerimeter - sideC)); // РќР°С…РѕР¶РґРµРЅРёРµ РїР»РѕС‰Р°РґРё РїРѕ С„РѕСЂРјСѓР»Рµ Р“РµСЂРѕРЅР°
 }

@@ -1,17 +1,17 @@
-#include "randminmax.h"
+п»ї#include "randminmax.h"
 #include <cmath>
 #include <iostream>
 
 namespace dynarr {
 
-	// Процедура заполнения массива случайными числами в заданном диапазоне
+	// РџСЂРѕС†РµРґСѓСЂР° Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё РІ Р·Р°РґР°РЅРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ
 	void arrRandom(int* arr, size_t size, int min, int max) {
 		for (size_t i = 0; i < size; ++i) {
 			arr[i] = randMinMax(min, max);
 		}
 	}
 
-	// Процедура заполнения массива факториалами
+	// РџСЂРѕС†РµРґСѓСЂР° Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° С„Р°РєС‚РѕСЂРёР°Р»Р°РјРё
 	void arrFactorial(int* arr, size_t size) {
 		for (int i = 0; i < size; ++i) {
 			if (i == 0) {
@@ -26,9 +26,9 @@ namespace dynarr {
 		}
 	}
 
-	// Процедура вывода массива
+	// РџСЂРѕС†РµРґСѓСЂР° РІС‹РІРѕРґР° РјР°СЃСЃРёРІР°
 	void outputArray(int* arr, size_t size) {
-		std::cout << "Элементы массива: ";
+		std::cout << "Р­Р»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°: ";
 		for (int i = 0; i < size; ++i) {
 			std::cout << arr[i] << " ";
 		}

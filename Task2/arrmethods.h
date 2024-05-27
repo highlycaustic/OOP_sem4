@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 namespace dynarr {
 	void arrRandom(int* arr, size_t size, int min, int max);

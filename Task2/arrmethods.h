@@ -1,7 +1,7 @@
 #pragma once
 
-#include <vector>
-
-void arrRandom(std::vector<int>& arr, int a, int b);
-void arrFactorial(std::vector<int>& arr);
-void outputArray(std::vector<int>& arr);
+namespace dynarr {
+	void arrRandom(int* arr, size_t size, int min, int max);
+	void arrFactorial(int* arr, size_t size);
+	void outputArray(int* arr, size_t size);
+}

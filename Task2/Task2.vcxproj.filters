@@ -18,12 +18,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vectmethods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="arrmethods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="randminmax.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="vectmethods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="arrmethods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randminmax.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

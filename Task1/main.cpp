@@ -10,9 +10,9 @@
 int main(){
 
 	// Проверка функции расчета длины отрезка
-	assert(triangleSideLength(0, 0, 0, 0) < FLT_EPSILON); // Проверка отрезка в нулевых координатах
-	assert((triangleSideLength(5, 5, -5, 5) - 10.0) < FLT_EPSILON); // Проверка отрезка в I - II четвертях
-	assert((triangleSideLength(7, 9, -11, -13) - 28.42534080710379) < FLT_EPSILON); // Проверка I - III четверти
+	assert(triangleSideLength(0.0, 0.0, 0.0, 0.0) < FLT_EPSILON); // Проверка отрезка в нулевых координатах
+	assert((triangleSideLength(5.0, 5.0, -5.0, 5.0) - 10.0) < FLT_EPSILON); // Проверка отрезка в I - II четвертях
+	assert((triangleSideLength(7.0, 9.0, -11.0, -13.0) - 28.42534080710379) < FLT_EPSILON); // Проверка I - III четверти
 
 	// Проверка функции расчета периметра
 	assert((trianglePerimeter(10.0, 20.0, 30.0) - 60.0) < FLT_EPSILON); // Ровные значения
@@ -25,8 +25,8 @@ int main(){
 	assert((triangleArea(42.0, 21.0, 56.0) - 374.577678859) < FLT_EPSILON); // Проверка на обычных значениях
 
 	setlocale(LC_ALL, "Russian"); // Для русского языка в консоли
-
-	int ax, ay, bx, by, cx, cy; // Координаты вершин треугольника
+	
+	float ax, ay, bx, by, cx, cy; // Координаты вершин треугольника
 	
 	std::cout << "Введите координаты x, y точки A: ";
 	std::cin >> ax >> ay;
@@ -48,4 +48,5 @@ int main(){
 	std::cout << "Периметр треугольника ABC: " << trianglePerimeter(sideA, sideB, sideC) << '\n';
 	std::cout << "Площадь треугольника ABC: " << triangleArea(sideA, sideB, sideC) << '\n';
 	return 0;
+
 }

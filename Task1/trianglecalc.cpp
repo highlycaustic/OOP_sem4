@@ -1,7 +1,7 @@
 ﻿#include <cmath>
 
 // Вычисляет длину отрезка по координатам x1, y1 первой точки и координатам x2, y2 второй точки.
-float triangleSideLength(int x1, int y1, int x2, int y2) {
+float triangleSideLength(float x1, float y1, float x2, float y2) {
 	return std::sqrt(std::pow((x2 - x1), 2) + std::pow((y2 - y1), 2));
 }
 

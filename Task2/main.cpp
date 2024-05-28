@@ -1,41 +1,11 @@
 ﻿#include "arrmethods.h"
+#include "checkerfunc.h"
 #include "vectmethods.h"
 #include <iostream>
 
 // раскомментировать строку ниже, чтобы отключить assert()
 // #define NDEBUG
 #include <cassert> // для assert
-
-bool checkArrRandom(std::vector<int> test_arr) { // Вектор test_arr копируется в функцию
-	
-	using namespace vect;
-
-	arrRandom(test_arr, 0, 0); // Заполнение вектора test_arr одним элементом со значением 0
-	if (test_arr[0] != 0) // Проверка, равен ли элемент 0
-		return false;
-
-	arrRandom(test_arr, -1, 1); // Заполнение вектора test_arr одним элементом со случайным значением от -1 до 1
-	if ((test_arr[0] < -1) || (test_arr[0] > 1)) // Проверка, входит ли элемент в диапазон [-1;1]
-		return false;
-
-	test_arr.resize(5); // Расширение вектора test_arr до 5 элементов
-	arrRandom(test_arr, -5, 5); // Заполнение вектора test_arr 5 элементами со случайным значением от -5 до 5
-	for (int i = 0; i < test_arr.size(); ++i) {
-		if ((test_arr[0] < -5) || (test_arr[0] > 5)) // Проверка, входят ли все элементы в диапазон [-5;5]
-			return false;
-	}
-
-	return true;
-
-}
-
-bool checkArrFactorial(std::vector<int> test_arr) { // ДОДЕЛАТЬ!!!!!
-
-	//test_arr.resize(5);
-	//arrFactorial(test_arr);
-
-	return true;
-}
 
 void arrExec() {
 	
@@ -57,10 +27,12 @@ void arrExec() {
 
 	arrRandom(rand_arr, n, min, max);
 	std::cout << "Массив случайных чисел. ";
+	std::cout << "Элементы массива: ";
 	outputArray(rand_arr, n);
 
 	arrFactorial(fact_arr, n);
 	std::cout << "Массив факториалов. ";
+	std::cout << "Элементы массива: ";
 	outputArray(fact_arr, n);
 
 }
@@ -85,10 +57,12 @@ void vectExec() {
 
 	arrRandom(rand_vect, min, max);
 	std::cout << "Массив случайных чисел. ";
+	std::cout << "Элементы массива: ";
 	outputArray(rand_vect);
 
 	arrFactorial(fact_vect);
 	std::cout << "Массив факториалов. ";
+	std::cout << "Элементы массива: ";
 	outputArray(fact_vect);
 
 }
@@ -96,8 +70,16 @@ void vectExec() {
 int main() {
 
 	{
-		std::vector<int> test_arr(1);
-		assert(checkArrRandom(test_arr));
+		std::vector<int> test_vect(5);
+		assert(checkVectRandom(test_vect));
+		assert(checkVectFactorial(test_vect));
+	}
+
+	{
+		size_t test_arr_size = 5;
+		int* test_arr = new int[test_arr_size];
+		assert(checkArrRandom(test_arr, test_arr_size));
+		assert(checkArrFactorial(test_arr, test_arr_size));
 	}
 
 	setlocale(LC_ALL, "Russian");

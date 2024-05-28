@@ -4,7 +4,7 @@
 
 namespace dynarr {
 
-	// Процедура заполнения массива случайными числами в заданном диапазоне
+	// Процедура заполнения массива случайными числами в заданном диапазоне.
 	void arrRandom(int* arr, size_t size, int min, int max) {
 		for (size_t i = 0; i < size; ++i) {
 			arr[i] = randMinMax(min, max);
@@ -28,7 +28,6 @@ namespace dynarr {
 
 	// Процедура вывода массива
 	void outputArray(int* arr, size_t size) {
-		std::cout << "Элементы массива: ";
 		for (int i = 0; i < size; ++i) {
 			std::cout << arr[i] << " ";
 		}

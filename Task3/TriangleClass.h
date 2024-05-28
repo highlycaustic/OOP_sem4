@@ -1,43 +1,43 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 
-/// @brief Класс треугольник. Имеет поля sideA, sideB, sideC - длины сторон треугольника,
-/// @brief perimeter - периметр треугольника, area - площадь треугольника.
+/// @brief РљР»Р°СЃСЃ С‚СЂРµСѓРіРѕР»СЊРЅРёРє. РРјРµРµС‚ РїРѕР»СЏ sideA, sideB, sideC - РґР»РёРЅС‹ СЃС‚РѕСЂРѕРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°,
+/// @brief perimeter - РїРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°, area - РїР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.
 class Triangle {
 private:
 
-	// Стороны треугольника
+	// РЎС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 	float sideA;
 	float sideB;
 	float sideC;
 
-	// Периметр и площадь треугольника
+	// РџРµСЂРёРјРµС‚СЂ Рё РїР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 	float perimeter;
 	float area;
 
-	void setPerimeter(float _sideA, float _sideB, float _sideC); // Сеттер периметра
+	void setPerimeter(float _sideA, float _sideB, float _sideC); // РЎРµС‚С‚РµСЂ РїРµСЂРёРјРµС‚СЂР°
 
-	void setArea(float _sideA, float _sideB, float _sideC); // Сеттер площади
+	void setArea(float _sideA, float _sideB, float _sideC); // РЎРµС‚С‚РµСЂ РїР»РѕС‰Р°РґРё
 
 public:
 
-	// Конструктор инициализируется значениями по умолчанию, если не задано иное
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚СЃСЏ Р·РЅР°С‡РµРЅРёСЏРјРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РµСЃР»Рё РЅРµ Р·Р°РґР°РЅРѕ РёРЅРѕРµ
 	Triangle(float _sideA = 1.0, float _sideB = 1.0, float _sideC = 1.0);
 
-	// Метод проверки треугольника
+	// РњРµС‚РѕРґ РїСЂРѕРІРµСЂРєРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 	bool isValid(float _sideA, float _sideB, float _sideC);
 
-	// Сеттеры сторон треугольника
+	// РЎРµС‚С‚РµСЂС‹ СЃС‚РѕСЂРѕРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 	void setSideA(float _sideA);
 	void setSideB(float _sideB);
 	void setSideC(float _sideC);
 
-	// Геттеры сторон треугольника
+	// Р“РµС‚С‚РµСЂС‹ СЃС‚РѕСЂРѕРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 	float getSideA() const;
 	float getSideB() const;
 	float getSideC() const;
 
-	// Геттеры периметра и площади
+	// Р“РµС‚С‚РµСЂС‹ РїРµСЂРёРјРµС‚СЂР° Рё РїР»РѕС‰Р°РґРё
 	float getPerimeter() const;
 	float getArea() const;
 

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "Shapes.h"
 
 using namespace std;
@@ -7,7 +7,7 @@ int main() {
 
 	setlocale(LC_ALL, "Russian");
 
-	// Объявление объектов
+	// РћР±СЉСЏРІР»РµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ
 	Shape* shape_obj = new Shape;
 	Square* square_obj = new Square;
 	Circle* circle_obj = new Circle;

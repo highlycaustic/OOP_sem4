@@ -1,4 +1,4 @@
-#define _USE_MATH_DEFINES
+ï»¿#define _USE_MATH_DEFINES
 
 #include <cmath>
 #include <iostream>
@@ -24,7 +24,7 @@ Square::Square(float _side) {
 		this->side = abs(_side);
 	}
 	else
-		std::cout << "Íåâåðíî çàäàíà äëèíà ñòîðîíû";
+		std::cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾ Ð·Ð°Ð´Ð°Ð½Ð° Ð´Ð»Ð¸Ð½Ð° ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹";
 }
 
 float Square::perimeter() const { return this->side * 4; }
@@ -35,7 +35,7 @@ void Square::setSide(float _side) {
 		this->side = abs(_side);
 	}
 	else
-		std::cout << "Íåâåðíî çàäàíà äëèíà ñòîðîíû";
+		std::cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾ Ð·Ð°Ð´Ð°Ð½Ð° Ð´Ð»Ð¸Ð½Ð° ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹";
 }
 
 float Square::getSide() { return this->side; }
@@ -46,7 +46,7 @@ Circle::Circle(float _radius) {
 		this->radius = abs(_radius);
 	}
 	else
-		std::cout << "Íåâåðíî çàäàí ðàäèóñ";
+		std::cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾ Ð·Ð°Ð´Ð°Ð½ Ñ€Ð°Ð´Ð¸ÑƒÑ";
 }
 
 float Circle::perimeter() const { return 2 * M_PI * this->radius; }
@@ -57,6 +57,6 @@ void Circle::setRadius(float _radius) {
 		this->radius = abs(_radius);
 	}
 	else
-		std::cout << "Íåâåðíî çàäàí ðàäèóñ";
+		std::cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾ Ð·Ð°Ð´Ð°Ð½ Ñ€Ð°Ð´Ð¸ÑƒÑ";
 }
 float Circle::getRadius() { return this->radius; }

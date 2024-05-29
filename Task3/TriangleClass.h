@@ -27,7 +27,10 @@ public:
 	// Метод проверки треугольника
 	bool isValid(float _sideA, float _sideB, float _sideC);
 
+	void updateFields();
+
 	// Сеттеры сторон треугольника
+	void setSides(float _sideA, float _sideB, float _sideC);
 	void setSideA(float _sideA);
 	void setSideB(float _sideB);
 	void setSideC(float _sideC);
@@ -42,3 +45,6 @@ public:
 	float getArea() const;
 
 };
+
+bool checkSettersSeparate(Triangle* test_obj);
+bool checkSettersGeneral(Triangle* test_obj);

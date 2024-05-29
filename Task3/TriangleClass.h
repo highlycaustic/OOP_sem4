@@ -12,12 +12,12 @@ private:
 	float sideC;
 
 	// Периметр и площадь треугольника
-	float perimeter;
-	float area;
+	//float perimeter;
+	//float area;
 
-	void setPerimeter(float _sideA, float _sideB, float _sideC); // Сеттер периметра
+	//void setPerimeter(float _sideA, float _sideB, float _sideC); // Сеттер периметра
 
-	void setArea(float _sideA, float _sideB, float _sideC); // Сеттер площади
+	//void setArea(float _sideA, float _sideB, float _sideC); // Сеттер площади
 
 public:
 
@@ -27,7 +27,7 @@ public:
 	// Метод проверки треугольника
 	bool isValid(float _sideA, float _sideB, float _sideC);
 
-	void updateFields();
+	//void updateFields();
 
 	// Сеттеры сторон треугольника
 	void setSides(float _sideA, float _sideB, float _sideC);
